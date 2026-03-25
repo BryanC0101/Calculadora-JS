@@ -3,16 +3,25 @@ body {
     background: radial-gradient(circle, rgba(71, 151, 255, 1) 0%, rgba(56, 199, 178, 1) 100%);
 }
 
-.calculadora {
-
+#calculadora {
+    display: block;
+    justify-self: center;
+    height: 500px;
+    width: 320px;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
 }
-#tela {
-    background: white;
+#calculadora span{
+    display: block;
+    justify-self: center;
+    background: rgb(195, 193, 193);
     height: 100px;
-    width: 100px;
+    width: 320px;
+    border-radius: 10px;
+
 }
 
-.calculadora div{
+#calculadora div{
     display: grid;
     justify-self: center;
     justify-content: center;
