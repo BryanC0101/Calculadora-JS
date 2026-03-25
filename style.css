@@ -1,0 +1,35 @@
+body {
+    background: #4797ff;
+    background: radial-gradient(circle, rgba(71, 151, 255, 1) 0%, rgba(56, 199, 178, 1) 100%);
+}
+
+.calculadora {
+
+}
+#tela {
+    background: white;
+    height: 100px;
+    width: 100px;
+}
+
+.calculadora div{
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100px;
+    height: 100px;
+    
+  
+}
+.teclado button{
+    border-radius: 10%;
+    border: 1px solid rgb(110, 110, 110);
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    
+}
+.teclado button:hover {
+    transform: scale(1.05);
+}
