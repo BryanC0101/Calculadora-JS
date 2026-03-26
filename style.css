@@ -62,7 +62,11 @@ body {
     font-size: 30px;
     background: rgb(214, 214, 214, 0.7);
     color: rgb(35, 34, 34);
+    transition: background-color 0.3s ease-out, transform 0.2s ease-in; 
 }
 .teclado button:hover {
     transform: scale(1.05);
+}
+.teclado button:active{
+    background: rgb(253, 191, 77);
 }

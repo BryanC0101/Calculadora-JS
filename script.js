@@ -1,5 +1,5 @@
 const visor = document.getElementById('visor');
-const sinais = ['+', '-', '*', '/', '%', ','];
+const sinais = ['+', '-', '*', '/', '%', '.'];
 let memoria = []
 
 
@@ -27,14 +27,27 @@ function apagar() {
 }
 
 function resultado() {
-    if (memoria === '' && visor.innerHTML === '') {
+    if (memoria === '' || visor.innerHTML === '') {
         return;
     }
     let expressao = memoria.join("");
+    expressao = expressao.replace(/(\d+)%/g, "($1/100)")
+
+
+    // let express_array = [expressao];
+    // console.log(express_array)
+    // let i = express_array.indexOf("%");
+    // if (i !== -1) {
+    //     express_array[1] = "/100";
+    // }
+
+
     let resultado = eval(expressao);
+    console.log(memoria);
+    console.log(expressao);
+    console.log(resultado);
+    
     visor.innerHTML = '';
     visor.innerHTML = resultado;
     memoria = [];
-    console.log(expressao);
-    console.log(resultado);
 }
