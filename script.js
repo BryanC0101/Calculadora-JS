@@ -1,5 +1,5 @@
 const visor = document.getElementById('visor');
-const sinais = ['+', '-', '*', '/', '%', ',', '='];
+const sinais = ['+', '-', '*', '/', '%', ','];
 let memoria = []
 
 
@@ -14,7 +14,6 @@ function inserir(valor) {
     } 
     memoria.push(valor)
     visor.innerHTML += valor
-    console.log(memoria);
 }
 
 function limpar() {
@@ -27,5 +26,8 @@ function apagar() {
 }
 
 function resultado() {
-    
+    let expressao = memoria.join("")
+    let resultado = eval(expressao)
+    visor.innerHTML = ''
+    visor.innerHTML = resultado
 }
