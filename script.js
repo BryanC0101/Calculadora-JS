@@ -22,12 +22,19 @@ function limpar() {
 }
 
 function apagar() {
-    memoria.pop()
+    memoria.pop();
+    visor.textContent = visor.textContent.slice(0, -1);
 }
 
 function resultado() {
-    let expressao = memoria.join("")
-    let resultado = eval(expressao)
-    visor.innerHTML = ''
-    visor.innerHTML = resultado
+    if (memoria === '' && visor.innerHTML === '') {
+        return;
+    }
+    let expressao = memoria.join("");
+    let resultado = eval(expressao);
+    visor.innerHTML = '';
+    visor.innerHTML = resultado;
+    memoria = [];
+    console.log(expressao);
+    console.log(resultado);
 }

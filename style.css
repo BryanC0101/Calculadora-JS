@@ -27,7 +27,7 @@ body {
 }
 
 #visor{
-    overflow-wrap: anywhere;
+    overflow-wrap: a;
     display: flex;
     justify-self: center;
     background: rgb(255, 255, 255, 0);
